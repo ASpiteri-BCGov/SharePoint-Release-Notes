@@ -4,48 +4,6 @@
 $( document ).ready( function() {
   
   get_watched_repos();
-  
-  // RESET BUTTON
-  $("#reset").click(function()
-  {
-    $( '#result' ).html( "<h2>Click a button</h2>" );
-  }); // close reset click handler
-  
-  
-  //CLICK REPO BUTTON
-  $("#repo").click(function()
-  {
-    var html = "";
-    $( '#result' ).html( "" );
-    $.ajax({
-      url:"https://api.github.com/repos/bvasko/Bootstrap-Select-Box",
-      dataType: "jsonp",
-      success : function( returndata )
-      {
-        $('#result').html("");
-        var date = new Date(returndata.data.updated_at);
-    		date.toDateString()
-        var month = date.getMonth() + 1
-				var day = date.getDate()
-				var year = date.getFullYear()
-        date_str = month + "/" + day + "/" + year;
-        //console.log(returndata);
-        html +="<h2>"+ returndata.data.full_name + "</h2>";
-        html +="<h4>" + returndata.data.description + "</h4>";
-        html +="<p>Last updated: " + date_str + "</p>";
-        $('#result').append( html );
-      }
-    });
-    return false;
-  }); // close repo click handler
-  
-  //CLICK WATCHED BUTTON
-  $("#watched").click(function()
-   {
-    get_watched_repos()
-    return false;
-   });   //close watched click handler
-  
 
 function get_watched_repos() 
 {
@@ -85,5 +43,5 @@ function get_watched_repos()
 <div style="background-color:#cacaca; padding: 20px; margin: 0 20px 0 20px;" id="result">
 
   <h2>Github API Ajax Example</h2>
-	<a href="https://aspiteri-bcgov.github.io/SharePoint-Release-Notes/SPR20190509.md">test</a>
+<a href="https://aspiteri-bcgov.github.io/SharePoint-Release-Notes/SPR20190509.md">test</a>
 </div>
