@@ -42,8 +42,17 @@
                 '</li>';
             } // If  End
           }); // For End
-          $('#result').append(html);
+          
+            var clickedId= $(this).text();
+            var url = $('.ntLnk').html(); 
+            var split = url.split('.');
+            split[split.length - 1] = 'html'; 
+            var newUrl = split.join('.');
+            $('.ntLnk').html(newUrl);
+            
+          $('#result').append(html); // Append constructed HTML results to div
         } // Success End
+        
       }); // Ajax End
     } // get_watched_repos End
   }); // Document Ready End
