@@ -42,17 +42,20 @@
                 '</li>';
             } // If  End
           }); // For End
-          
-            
-            var url = $('.ntLnk').html(); 
-            var split = url.split('.');
-            split[split.length - 1] = 'html'; 
-            var newUrl = split.join('.');
-            $('.ntLnk').html(newUrl);
-            
+
+
+          var url = $('.ntLnk').html();
+          console.log(url);
+          var split = url.split('.');
+          console.log(split);
+          split[split.length - 1] = 'html';
+          var newUrl = split.join('.');
+          console.log(newUrl);
+          $('.ntLnk').html(newUrl);
+
           $('#result').append(html); // Append constructed HTML results to div
         } // Success End
-        
+
       }); // Ajax End
     } // get_watched_repos End
   }); // Document Ready End
