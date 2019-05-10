@@ -20,7 +20,7 @@ list-style: none;
                 url: "https://api.github.com/repos/ASpiteri-BCGov/SharePoint-Release-Notes/contents",
                 dataType: "jsonp",
                 success: function (returndata) {
-
+                console.log(this);
                     $.each(returndata.data, function (i, item) {
                         if (this.name != "_config.yml") {
                             html += '<li>' +
