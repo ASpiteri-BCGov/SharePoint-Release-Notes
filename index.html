@@ -18,12 +18,14 @@ function get_watched_repos()
     	success : function ( returndata ) {
         
       	$.each( returndata.data, function ( i, item ) {
+          if (this.name != "_config.yml"){
                 	html += '<li>' +
                     '<h3><a href="' + this.html_url + '">' + this.name + '</a></h3>' +
                     '<ul>' +
                       '<li>' + 'name: ' + this.name + '</li>' +
                     '</ul>' +
                   '</li>';
+          }
       	} );
       $( '#result' ).append( html );
      } 
