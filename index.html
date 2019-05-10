@@ -1,4 +1,3 @@
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <style>
     
@@ -41,12 +40,12 @@
                         console.log(this);
                         if (this.name != "_config.yml") {
                             html += '<li>' +
-                                '<a href="' + this.html_url + '">' + this.name + '</a>' +
+                                '<a class="ntLnk" href="' + this.html_url + '">' + this.name + '</a>' +
                                 '<ul>' +
                                 '<li>' + 'name: ' + this.name + '</li>' +
                                 '</ul>' +
                                 '</li>';
-                        }
+                          }
                     });
                     $('#result').append(html);
                 }
