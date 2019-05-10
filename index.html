@@ -26,7 +26,8 @@ function get_watched_repos()
                   '</li>';
       	} );
       $( '#result' ).append( html );
-     } // close success handler
+     } 
+    $("h2").next().append( "<b>; not newsletter</b>" );
      });  
 }
 }); 
