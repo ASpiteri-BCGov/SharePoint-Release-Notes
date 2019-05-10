@@ -26,8 +26,8 @@
                 url: "https://api.github.com/repos/ASpiteri-BCGov/SharePoint-Release-Notes/contents",
                 dataType: "jsonp",
                 success: function (returndata) {
-                console.log(this);
-                    $.each(returndata.data, function (i, item) {
+                       $.each(returndata.data, function (i, item) {
+                        console.log(this);
                         if (this.name != "_config.yml") {
                             html += '<li>' +
                                 '<h3><a href="' + this.html_url + '">' + this.name + '</a></h3>' +
