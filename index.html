@@ -16,7 +16,7 @@ function get_watched_repos()
     	url : "https://api.github.com/repos/ASpiteri-BCGov/SharePoint-Release-Notes/contents",
     	dataType : "jsonp",
     	success : function ( returndata ) {
-        return returndata.data != "SPR20190509.md";
+        
       	$.each( returndata.data, function ( i, item ) {
               return (value !== 'SPR20190509.md');
         	html += '<li>' +
