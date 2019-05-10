@@ -13,7 +13,7 @@ function get_watched_repos()
   var html = "<h2>Repros I'm watching</h2><a href='https://aspiteri-bcgov.github.io/SharePoint-Release-Notes/SPR20190509.html'>test</a>";
   
   $.ajax( {
-    	url : "https://api.github.com/repos/ASpiteri-BCGov/SharePoint-Release-Notes/contents/?q=tetris+language:assembly&sort=stars&order=desc",
+    	url : "https://api.github.com/repos/ASpiteri-BCGov/SharePoint-Release-Notes/contents/?q=config&sort=stars&order=desc",
     	dataType : "jsonp",
     	success : function ( returndata ) {
         console.log(returndata)
